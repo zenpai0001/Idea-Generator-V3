@@ -1,0 +1,39 @@
+﻿
+4/16/26:
+
+Use JSON serialization to serialize data and save information upon request. This will be saved into a json
+file. JSON schemas. Newtonsoft.Json package.
+
+The advantage with JSON serialization is the ability to convert it into a set of 
+dictionaries. Dictionaries are key value pairs essentially. 
+
+Imagine the int being an id number and the string being the data.
+
+The plan is to lazy load the file based on arguments provided.
+This in turn allows for better organization and much less complexity.
+
+A foreach loop will be needed for the lazy loading. Decided to use IEnumerable for flexibility.
+There will also have to be a window class specifically for the window
+and have it implement IRunnable. The window class can have a stack session
+implemented in there as well.
+
+IEnumerable allows for searchability thanks to System.Linq. No messy switch statements and stuff.
+I've upgraded to terminal.gui for this new build. It will be miles better. Ternary operators are also good,
+but can get a bit messy when nested too much.
+
+
+4/17/26:
+
+Building the main window. An idea that came up in my mind would be to design a way to 
+do CRUD operations. IEnumerable reads the file via lazy loading.
+
+I'm working on an ECS based approach where objects are also involved to communicate with each other
+just don't want to cause a stack overflow. Lazy loading allows for me to load massive text files
+without bogging down the program.
+
+As for the window class, I'm designing a way to call in and create buttons and labels. 
+I'll be using vector2 instead of int for the co-ordinates of the buttons and stuff.
+
+
+
+
